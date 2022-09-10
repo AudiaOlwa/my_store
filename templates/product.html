@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block content %}
+
+<!--p style="font-size: 35px;text-shadow: 2px 2px 4px; font-family: Georgia, 'Times New Roman', Times, serif ; text-align: center;" class="my-3 "> <marquee behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="12" direction="right"><i>Bienvenue chez nous</i></marquee> </p>
+       </aside-->
+
+  <!--div class="row mt-5 container-fluid " >
+  <div class=" d-flex ">
+    
+  <div class="col-3" style="margin-left: 40px;">
+    
+      <body > <img src="{% static 'store1/images/soie.jpeg' %}" style="width:225px;" class="rounded" > </body>
+    
+   <footer>
+       <p> Tissu en Soie    </p>
+
+       <p> Prix:30.000 Fcfa  </p>
+     </footer>
+
+   </div>
+     
+   <div class="col-3">
+    
+     <body><img src="{% static 'store1/images/dent1.jpg' %}" style="width: 200px;" class="rounded"></body>
+     <footer>
+       
+       <p> Tissu en dentelle   </p>
+
+       <p> Prix:60.000 Fcfa  </p>
+
+     </footer>
+   </div>
+    
+   <div class="col-3" >
+   
+     <body><img src="{% static 'store1/images/basin2.jpg' %}"  style="width: 200px;" class="rounded"></body>
+     <footer>
+       
+       <p>  Bazin   </p>
+
+       <p> Prix:50.000 Fcfa </p>
+
+     </footer>
+   </div>
+
+
+   <div class="col-3" >
+   
+     <body><img src="{% static 'store1/images/kent.jpg' %}"  style="width: 200px;" class="rounded"></body>
+     <footer>
+       
+       <p>  Tissu Kente   </p>
+
+       <p> Prix:60.000 Fcfa  </p>
+
+     </footer>
+   </div>
+     
+   </div>
+  </div-->
+
+
+
+<!-------------------row2------------------------->
+<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
+{% for product in product %}
+<a href="{% url 'details' product.id %}" style="margin-left:50px"><img src="{{ product.upload.url }}" style="width:250px" class="rounded"></a>
+    
+{% endfor %}
+</div>
+ 
+     
+  
+
+  <!------------------------------>
+    
+  
+
+ <!--div class="row mt-5 container-fluid ">
+  <div class=" d-flex">
+    
+  <div class="col-3" style="margin-left:40px;">
+   
+     <body> <img src="{% static 'store1/images/sari.webp' %}" style="width:180px"class="rounded"> </body>
+     <footer>
+       <p> Sari   </p>
+
+       <p> Prix:60.000 Fcfa  </p>
+     </footer>
+
+   </div>
+     
+   <div class="col-3">
+    
+     <body><img src="{% static 'store1/images/bo.jpeg' %}" style="width: 200px;" class="rounded"></body>
+     <footer>
+       
+       <p> Tissu Bologan   </p>
+
+       <p> Prix:100.000 Fcfa  </p>
+
+     </footer>
+   </div>
+    
+   <div class="col-3" >
+   
+     <body><img src="{% static 'store1/images/tissé.jpeg' %}"  style="width: 170px;" class="rounded"></body>
+     <footer>
+       
+       <p>  Tissu Tissé  </p>
+
+       <p> Prix:50.000 Fcfa </p>
+
+     </footer>
+   </div>
+
+
+   <div class="col-3" >
+   
+     <body><img src="{% static 'store1/images/cire.jpeg' %}"  style="width: 220px;" class="rounded"></body>
+     <footer>
+       
+       <p>  Tissu Cire   </p>
+
+       <p> Prix:60.000 Fcfa  </p>
+
+     </footer>
+   </div>
+     
+   </div>
+  </div-->
+  <!-------------------row3------------------------->
+  <!--div class="row mt-5 container-fluid ">
+  <div class=" d-flex">
+    
+  <div class="col-3" style="margin-left: 40px;">
+   
+     <body> <img src="{% static 'store1/images/satin.jpeg' %}" style="width:250px" class="rounded"> </body>
+     <footer>
+       <p> Tissu en Satin   </p>
+
+       <p> Prix:60.000 Fcfa  </p>
+     </footer>
+
+   </div>
+     
+   <div class="col-3">
+    
+     <body><img src="{% static 'store1/images/dent2.jpg' %}" style="width: 220px;" class="rounded"></body>
+     <footer>
+       
+       <p> Tissu Dentelle  </p>
+
+       <p> Prix:100.000 Fcfa  </p>
+
+     </footer>
+   </div>
+    
+   <div class="col-3" >
+   
+     <body><img src="{% static 'store1/images/basin1.jpeg' %}"  style="width: 220px;" class="rounded"></body>
+     <footer>
+       
+       <p>  Basin  </p>
+
+       <p> Prix:60.000 Fcfa </p>
+
+     </footer>
+   </div>
+
+
+   <div class="col-3" >
+   
+     <body><img src="{% static 'store1/images/sari2.jpeg' %}"  style="width: 200px;" class="rounded"></body>
+     <footer>
+       
+       <p>  Sari   </p>
+
+       <p> Prix:60.000 Fcfa  </p>
+
+     </footer>
+   </div>
+     
+   </div>
+  </div-->
+
+<!---boby------------------------------------------------>
+
+{% endblock %}

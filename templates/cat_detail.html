@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h3 style="margin-top: 100px; margin-bottom: 30px;">Savoir plus sur nos Categories </h3>
+
+<body> <img src="{{ categorie.upload.url }}" style="width:500px" class="rounded"></body>
+
+<h6 style="margin-top: 15px"> 
+<p>Nom : {{ categorie.name }} </p>
+<p> Publié en {{ categorie.year_formed }} </p>
+<p>Description : {{ categorie.description }} </p>
+<a href="{% url 'categorie' %}">Retour à la liste des catégories</a>
+
+
+</h6>
+{% endblock %}

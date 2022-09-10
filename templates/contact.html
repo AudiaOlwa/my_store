@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
+
+<h6>Nous sommes là pour vous aider.</h6>
+
+<form action="" method="post" class="">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Envoyer">
+</form>
+…
+
+
+</div>
+{% endblock %}
+

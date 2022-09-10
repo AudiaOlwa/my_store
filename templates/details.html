@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h3 style="margin-top: 100px; margin-bottom: 30px;">Savoir plus sur nos articles </h3>
+
+<body> <img src="{{ product.upload.url }}" style="width:500px" class="rounded"></body>
+
+<h6 style="margin-top: 15px"> 
+<p>Nom : {{ product.name }} </p>
+<p> Prix : {{ product.price }} Fcfa </p>
+<p> Publié en {{ product.year_formed }} </p>
+<p>Nouveau : {{ product.new|yesno }} </p>
+<p>Description : {{ product.description }} </p>
+
+<a href="{% url 'product' %}">Retour à la liste des articles</a>
+
+
+</h6>
+{% endblock %}
