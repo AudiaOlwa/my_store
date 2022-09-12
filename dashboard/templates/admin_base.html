@@ -15,17 +15,15 @@
 <body style="background-color:whitesmoke;text-align: center;">
 <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'categorie' %}">Categories</a>
+    <a class="nav-link active" aria-current="page" href="{% url 'admin_categorie' %}">Categories</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{% url 'all' %}">Tout</a>
+    <a class="nav-link" href="{% url 'admin_all' %}">Tout</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Tendances</a>
+    <a class="nav-link" href="{% url 'admin_product' %}">Produits</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'contact' %}" tabindex="-1" aria-disabled="true">Help</a>
-  </li>
+ 
 </ul>
 
 	{% block content %}{% endblock %}
@@ -33,7 +31,7 @@
 
 
 
-<footer class="bg-dark text-center text-white mt-5"  >
+<footer class="bg-dark text-center text-white mt-5" style="padding-top: 20px" >
   
  
   <div class="container ">

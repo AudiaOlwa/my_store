@@ -47,7 +47,7 @@ def confirm(request):
 
 #def create(request):
     #if request.method == 'POST':
-     ##   form = ProductForm(request.POST)
+     #   form = ProductForm(request.POST)
       #  if form.is_valid():
       #      print("********************",  form.errors)
       #      product = form.save()

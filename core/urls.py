@@ -17,11 +17,7 @@ urlpatterns = [
     path('confirm', views.confirm, name='confirm'),
     #path('product/create/', views.create, name='create' ),
     #path('categorie/create/', views.create_cat, name='create_cat'),
-    path('all/', views.all, name='all'),
-    path('dash/',include('dashboard.urls')),
-
-
-   
+    path('all/', views.all, name='all'),   
 
 ]
 

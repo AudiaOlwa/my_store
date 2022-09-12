@@ -1,0 +1,15 @@
+{% extends 'admin_base.html' %}
+{% load static %} 
+{% block content %}
+
+<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
+<h6>Vos catégories d'article </h6>
+{% for categorie in categorie %}
+
+<a href="{% url 'admin_cat_detail' categorie.id %}" style="margin-left:50px"><img src="{{ categorie.upload.url }}" style="width:250px" class="rounded my-5 " ></a>
+    
+ {% endfor %}
+        
+</div>
+ 
+ {% endblock %}
