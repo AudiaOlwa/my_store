@@ -4,6 +4,7 @@ from . forms import CategorieForm
 from . models import Product
 from . models import Categorie 
 from django.shortcuts import redirect
+from core import *
 
 # Create your views here.
 
