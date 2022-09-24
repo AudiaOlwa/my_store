@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'store1/images' %}">
 
 </head>
-<body style="background-color:whitesmoke;text-align: center;">
+<body style="text-align: center; background-image: url({% static "store1/images/im.jpeg"%});"> 
 <ul class="nav justify-content-center">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="{% url 'admin_categorie' %}">Categories</a>
@@ -23,6 +23,15 @@
   <li class="nav-item">
     <a class="nav-link" href="{% url 'admin_product' %}">Produits</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'admin_create' %}">ajouté_produits</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'admin_create_cat' %}">ajouté_catégorie</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'all' %}">My_Store</a>
+  </li>
  
 </ul>
 
@@ -30,8 +39,8 @@
 
 
 
-<div style="margin-top:332px">
-<footer class="bg-dark text-center text-white mt-5" style="padding-top: 20px;" >
+<div style="margin-top:">
+<footer class="bg- text-center text-white mt-5" style="padding-top: 20px; background-color: black;" >
   
  
   <div class="container ">

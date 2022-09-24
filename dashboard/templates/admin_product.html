@@ -2,7 +2,7 @@
 {% load static %} 
 {% block content %}
 
-<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
+<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;" class="text-white">
 	<h6>Vos articles</h6>
 
 
@@ -10,6 +10,8 @@
 <a href="{% url 'admin_details' product.id %}" style="margin-left:50px"><img src="{{ product.upload.url }}" style="width:250px" class="rounded"></a>
     
 {% endfor %}
+
+
 </div>
  
  {% endblock %}

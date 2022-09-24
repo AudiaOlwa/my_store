@@ -1,7 +1,7 @@
 {% extends 'admin_base.html' %}
 {% load static %} 
 {% block content %}
-
+<div class="text-white">
 <h3 style="margin-top: 100px; margin-bottom: 30px;">Savoir plus sur nos articles </h3>
 
 <body> <img src="{{ product.upload.url }}" style="width:500px" class="rounded"></body>
@@ -15,7 +15,6 @@
 
 <a href="{% url 'admin_product' %}">Retour à la liste des articles</a>
 
-
 </h6>
- 
+ </div>
  {% endblock %}

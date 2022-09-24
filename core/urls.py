@@ -17,7 +17,8 @@ urlpatterns = [
     path('confirm', views.confirm, name='confirm'),
     #path('product/create/', views.create, name='create' ),
     #path('categorie/create/', views.create_cat, name='create_cat'),
-    path('all/', views.all, name='all'),   
+    path('all/', views.all, name='all'),  
+    path('acheter', views.acheter, name='acheter'), 
 
 ]
 

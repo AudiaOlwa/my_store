@@ -4,9 +4,12 @@ from . forms import CategorieForm
 from . models import Product
 from . models import Categorie 
 from django.shortcuts import redirect
-from core import *
+#from core import *
+from core.models import Product
+from core.models import Categorie
 
 # Create your views here.
+
 
 def dash(request):
 	return render(request, 'dash.html')
@@ -65,6 +68,5 @@ def admin_create_cat(request):
     else:
         form = CategorieForm()
         return render(request, 'admin_create_cat.html', {'form': form})  
-
 
 

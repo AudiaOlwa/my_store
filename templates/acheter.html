@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block content %}
+
+
+
+<div class="row container" style="margin-left: 8%">
+  <div class="col-md-10" style="padding-left: 70px;">
+     <h5 class="text-" style="margin-left: 100px;">Remplissez vos coordonnées</h5>
+  <div class="col-md-4 ">
+    <label for="validationServer01" class="form-label">Nom~Prénom</label>
+    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark Otto" required>
+    <div class="valid-feedback">
+      Vérifiez!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer02" class="form-label">Addresse</label>
+    <input type="text" class="form-control is-valid" id="validationServer02" value="addresse" required>
+    <div class="valid-feedback">
+      Vérifiez!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerUsername" class="form-label">Email</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+      <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Insérez votre addresse.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationServer03" class="form-label">Ville</label>
+    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+    <div id="validationServer03Feedback" class="invalid-feedback">
+      Choissisez une ville valide.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationServer04" class="form-label">Pays</label>
+    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+      <option selected disabled value="">Choisir...</option>
+      <option>Bénin</option>
+      <option>France</option>
+      <option>Amérique</option>
+      <option>Ghanna</option>
+      <option>Togo</option>
+    </select>
+    <div id="validationServer04Feedback" class="invalid-feedback">
+      Choissisez un pays valide.
+    </div>
+    <button class="btn btn-primary mt-2" type="submit">Envoyez</button>
+  </div>
+ 
+  </div-->
+  <a class="btn btn-danger " href="{% url 'all' %}" role="button" style="margin-right: 500px">Annulé </a>
+   
+<!----------------->
+  </div>
+  <div class="col-md-2 mt-5" style="padding-right: 20px;" >
+    <h6>Mode de payement</h6>
+    
+    <a class="btn btn-danger" href="#" role="button">Bank</a>
+    <a class="btn btn-secondary" href="#" role="button">Paypal</a>
+
+      <form class="row gy-4 gx-5 align-items-center mt-2">
+  <div class="col-auto">
+    <a class="btn btn-primary" href="#" role="button">Carte</a>
+    <label class="" for="autoSizingInput">Nom de carte</label>
+    <input type="text" class="form-control" id="autoSizingInput" placeholder="Nom ">
+  </div>
+  <div class="col-auto">
+    <label class="" for="autoSizingInputGroup">Numéro de carte</label>
+    <div class="input-group">
+     
+      <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Numéro">
+    </div>
+  </div>
+  <div class="col-auto">
+    <label class="" for="autoSizingSelect">Mois</label>
+    <select class="form-select" id="autoSizingSelect">
+      <option selected>Choissisez...</option>
+      <option value="1">Janvier</option>
+      <option value="2">Février</option>
+      <option value="3">Mars</option>
+      <option value="4">Avril</option>
+      <option value="5">Mai</option>
+      <option value="6">Juin</option>
+      <option value="7">Juillet</option>
+      <option value="8">Aout</option>
+      <option value="8">Septembre</option>
+      <option value="9">Octobre</option>
+      <option value="10">Novembre</option>
+      <option value="11">Décembre</option>
+      </select>
+  </div>
+
+   <div class="col-auto">
+    <label class="" for="autoSizingSelect">Année</label>
+    <select class="form-select" id="autoSizingSelect">
+      <option selected>Choissisez...</option>
+      <option value="1">2015</option>
+      <option value="2">2016</option>
+      <option value="3">2017</option>
+      <option value="4">2018</option>
+      <option value="5">2019</option>
+      <option value="6">2020</option>
+      <option value="7">2021</option>
+      <option value="8">2022</option>
+      <option value="9">2023</option>
+    </select>
+  </div>
+  
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+</div>
+</form> 
+
+  </div>
+  
+</div>
+{% endblock %}

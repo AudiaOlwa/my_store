@@ -8,7 +8,8 @@ from django.shortcuts import redirect
 from django.core.mail import send_mail
 
 #-----------------------
-
+def acheter(request):
+    return render(request, 'acheter.html')
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -85,3 +86,4 @@ def all(request):
     categorie = Categorie.objects.all()
     product = Product.objects.all()
     return render(request, 'all.html',{'categorie':categorie,'product':product })
+
