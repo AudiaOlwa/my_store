@@ -2,11 +2,12 @@
 
 {% block content %}
 
-<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;" class="text-white">
+<!--div style="text-align: center;margin-top: 50px;margin-bottom: 50px;" class="text-white">
 	<h6>Vos articles</h6>
 
 {% for product in product %}
 <a href="{% url 'admin_details' product.id %}" style="margin-left:50px"><img src="{{ product.upload.url }}" style="width:250px" class="rounded"></a>
+
     {% endfor %}
 
 
@@ -18,7 +19,75 @@
     
  {% endfor %}
 	    
+</div-->
+
+<div class="row container-fluid text-white" style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
+	<div class="col-md-5">
+		<h6>Vos articles</h6>
+		{% for product in product %}
+
+<table class="table text-white ">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">#</th>
+      <th scope="col">Photo</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prix</th>
+      <th scope="col">Année</th>
+      <th scope="col">Nouvauté</th>
+      <th scope="col">Description</th>
+	  <th scope="col">Cathégorie</th-->
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ product.id }}</th>
+      <th scope="row"><img src="{{ product.upload.url }}" style="width:250px" class="rounded"></th>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }} Fcfa</td>
+      <td>{{ product.year_formed }}</td>
+      <td>{{ product.new|yesno }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.cat }}</td>
+     
+    </tr>
+     <tbody>
+     	</table>
+
+    {% endfor %}
 </div>
 
+<div class="col-md-5" style="padding-left: 355px;">
+<h6 style="margin-top:50px">Vos catégories d'article </h6>
+{% for categorie in categorie %}
 
+<table class="table text-white ">
+  <thead>
+    <tr class="table-light">
+    	<th scope="col">#</th>
+    	<th scope="col">Nom</th>
+      <th scope="col">Description</th>
+      <th scope="col">Année</th>
+      <th scope="col">Photo</th>
+      
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <th scope="row">{{ categorie.id }}</th>
+     <td>{{ categorie.name }}</td>
+     <td>{{ categorie.description }}</td>
+	<td>{{ categorie.year_formed }}</td>
+<th scope="row"><img src="{{ categorie.upload.url }}" style="width:250px" class="rounded"></th>
+</tr>
+     <tbody>
+     	</table>
+{% endfor %}
+
+
+	
+	</div>
+</div>
 {% endblock %}

@@ -12,7 +12,10 @@ from core.models import Categorie
 
 
 def dash(request):
-	return render(request, 'dash.html')
+	 categorie = Categorie.objects.all()
+	 product = Product.objects.all()
+	 return render(request, 'admin_all.html',{'categorie':categorie,'product':product })
+
 
 
 def admin_categorie(request):

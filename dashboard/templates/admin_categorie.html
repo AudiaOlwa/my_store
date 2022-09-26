@@ -5,11 +5,40 @@
 <div style="text-align: center;margin-top: 50px;margin-bottom: 50px;" class="text-white">
 <h6>Vos catégories d'article </h6>
 {% for categorie in categorie %}
+<!--a href="{% url 'admin_cat_detail' categorie.id %}" style="margin-left:50px"><img src="{{ categorie.upload.url }}" style="width:250px" class="rounded my-5 " ></a-->
 
-<a href="{% url 'admin_cat_detail' categorie.id %}" style="margin-left:50px"><img src="{{ categorie.upload.url }}" style="width:250px" class="rounded my-5 " ></a>
-    
- {% endfor %}
-        
+<table class="table container text-white ">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">#</th>
+      <th scope="col">Photo</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Année</th>
+      <th scope="col">Description</th>
+      
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ categorie.id }}</th>
+      <th scope="row"><img src="{{ categorie.upload.url }}" style="width:250px" class="rounded"></th>
+      <td>{{ categorie.name }}</td>
+   <td>{{ categorie.year_formed }}</td>
+   <td>{{ categorie.description }}</td>
+     
+     
+    </tr>
+     <tbody>
+        </table>
+
+{% endfor %}
+ 
+
+
+
+
+
 </div>
  
  {% endblock %}
